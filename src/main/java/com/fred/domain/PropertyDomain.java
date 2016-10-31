@@ -1,14 +1,12 @@
 package com.fred.domain;
 
-import java.sql.Blob;
-
 public class PropertyDomain extends AbstractDomain {
 
     private String code;
     private String title;
     private String description;
     private float value;
-    private Blob image;
+    private byte[] image;
 
     public String getCode() {
         return code;
@@ -42,11 +40,11 @@ public class PropertyDomain extends AbstractDomain {
         this.value = value;
     }
 
-    public Blob getImage() {
+    public byte[] getImage() {
         return image;
     }
 
-    public void setImage(Blob image) {
+    public void setImage(byte[] image) {
         this.image = image;
     }
 }

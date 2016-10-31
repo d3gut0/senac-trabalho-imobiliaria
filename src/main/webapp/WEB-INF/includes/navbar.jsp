@@ -3,7 +3,7 @@
 <nav class="navbar navbar-default navbar-inverse">
     <div class="container">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="/<c:url value="/"/>" title="Home">Home</a></li>
+            <li class="active"><a href="<c:url value="/"/>" title="Home">Home</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="/<c:url value="panel"/>" title="Painel administrativo">Painel</a></li>

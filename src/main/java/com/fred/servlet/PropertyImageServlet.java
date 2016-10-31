@@ -34,7 +34,7 @@ public class PropertyImageServlet extends HttpServlet {
             }
 
             // Input, output and source image
-            InputStream is = property.getImage().getBinaryStream();
+            InputStream is = new ByteArrayInputStream(property.getImage());
             OutputStream os = response.getOutputStream();
             BufferedImage sourceImage = ImageIO.read(is);
 

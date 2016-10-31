@@ -75,7 +75,7 @@ public class PropertyRepository {
         property.setCode(rs.getString("code"));
         property.setTitle(rs.getString("title"));
         property.setDescription(rs.getString("description"));
-        property.setImage(rs.getBlob("image"));
+        property.setImage(rs.getBytes("image"));
         property.setValue(rs.getFloat("value"));
     }
 
@@ -112,7 +112,7 @@ public class PropertyRepository {
         pst.setString(1, property.getCode());
         pst.setString(2, property.getTitle());
         pst.setString(3, property.getDescription());
-        pst.setBlob(4, property.getImage());
+        pst.setBytes(4, property.getImage());
         pst.setFloat(5, property.getValue());
     }
 

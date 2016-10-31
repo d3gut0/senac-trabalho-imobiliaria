@@ -8,10 +8,8 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
-import javax.sql.rowset.serial.SerialBlob;
 import java.io.IOException;
 import java.io.InputStream;
-import java.sql.Blob;
 import java.sql.SQLException;
 
 @WebServlet("/panel/property/form")
@@ -56,8 +54,7 @@ public class PanelPropertyFormServlet extends PanelAbstractServlet {
                     // Convert InputStream into Blob
                     InputStream input = request.getPart("image").getInputStream();
                     byte[] image = IOUtils.toByteArray(input);
-                    Blob blob = new SerialBlob(image);
-                    property.setImage(blob);
+                    property.setImage(image);
                 }
 
                 propertyRepository.save(property);
